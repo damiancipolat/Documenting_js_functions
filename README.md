@@ -6,10 +6,9 @@ The idea of this repository is to continue with the last 2 projects that I raise
 ## Why?
 For some time I have been dedicated to javascript and I see that there is still no standard on how developers should document what data should be passed as parameters. Although JS is not a typed language, somehow we have to specify what data is sent in each parameter.
 
-### Code:
+**Currently:**
 Currently this is one of my functions, I have started working with this format.
 
-**Currently:**
 ```js
 /*
   Receive currency code and return money simbol.
