@@ -6,6 +6,41 @@ The idea of this repository is to continue with the last 2 projects that I raise
 ## Why?
 For some time I have been dedicated to javascript and I see that there is still no standard on how developers should document what data should be passed as parameters. Although JS is not a typed language, somehow we have to specify what data is sent in each parameter.
 
+### Code:
+Currently this is one of my functions, I have started working with this format.
+
+**Currently:**
+```js
+/*
+  Receive currency code and return money simbol.
+  Params
+    currency : string
+  Return
+    string
+*/
+const getSymbol = (currency)=>{
+
+  switch(currency){
+    case 'ARS':
+      return '$';
+    case 'USD':
+      return 'U$S';
+    default:
+      return '$';
+  }
+  
+}
+```
+
+**New format:**
+```js
+/*
+  Receive currency code and return money simbol.
+  getSymbol:: string → string
+*/
+const getSymbol = (currency)=>{...}
+```
+
 ## Solution - Type Signatures
 These type notations are a **meta language** called Type Signatures, defines the inputs and outputs for the function, sometimes including the number of arguments, the types of arguments and order of arguments contained by a function.
 
@@ -13,7 +48,6 @@ Type Signatures are based on Hindley-Milner Type system as a standard type syste
 
 **Notation - examples**
 ```js
-
 // length :: String → Number
 const length = s => s.length;
 
@@ -24,5 +58,5 @@ const length = arr => arr.length;
 const join = (separator, arr) => arr.join(separator)
 ```
 
-Readings:
+## Readings:
 https://medium.com/hackernoon/function-type-signatures-in-javascript-5c698c1e9801
