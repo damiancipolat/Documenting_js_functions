@@ -24,3 +24,5 @@ const length = arr => arr.length;
 const join = (separator, arr) => arr.join(separator)
 ```
 
+Readings:
+https://medium.com/hackernoon/function-type-signatures-in-javascript-5c698c1e9801
