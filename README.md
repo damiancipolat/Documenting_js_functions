@@ -3,8 +3,6 @@
 # Documenting functions in javascript
 The idea of this repository is to continue with the last 2 projects that I raised on functional programming in js.
 
-<img src="https://media.licdn.com/dms/image/C4E22AQFxCiovjKkvNA/feedshare-shrink_800/0?e=1578528000&v=beta&t=rgJm5ccoGX3DXGaoS3ra7osbFBWJAbObbRnSMijxhv8" align="center" width="700px"/>
-
 ## But why?
 For some time I have been dedicated to javascript and I see that there is still no standard on how developers should document what data should be passed as parameters. Although JS is not a typed language, somehow we have to specify what data is sent in each parameter.
 
