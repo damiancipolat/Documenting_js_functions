@@ -61,27 +61,27 @@ const join = (separator, arr) => arr.join(separator)
 The sections are divided in **One parameter** / **Multiple parameters** / **High order functions**.
 
 ### One parameter:
-Examples using 1 parameter as input and one flat return data, **f(a) = b**.
+Examples using 1 parameter as input and one flat return data, **f(x) = y**.
 
-- STRING:
+- STRING - f(String) = Number:
 ```js
 //length :: String → Number
 const length = (a)=>a.length;
 ```
 
-- NUMBER:
+- NUMBER - f(Number) = Number:
 ```js
 //increase :: Number → Number
 const increase = value => value+10;
 ```
 
-- BOOLEAN:
+- BOOLEAN - f(Bool) = Bool.
 ```js
 //inverse :: Bool → Bool
 const inverse = value => !value;
 ```
 
-- ARRAY:
+- ARRAY - f([x]) = Number.
 ```js
 //length :: [a] → Number
 const length = list => list.length;
@@ -93,23 +93,36 @@ const length = list => list.length;
 const length = list => list.length;
 ```
 
-- DATE:
+- DATE - f(date) = Bool.
 ```js
 //expire :: Date → Bool
 const expire = expireDate => new Date()<=expireDate;
 ```
 
-- FUNCTION:
+- FUNCTION - f(g([a])) = [b].
 ```js
 //map :: (a → b) → [a] → [b]
 const map = fn => arr => arr.map(fn)
 ```
 
-- OBJECT:
+- OBJECT - f(object) = String.
 ```js
 //map :: object → string
 const toJson = obj => JSON.stringify(obj);
 ```
+
+### Multiple parameters:
+Examples using 2 parameters as input and one flat return data, **f(x,y) = z**.
+
+- STRING:
+```js
+// join :: (String, [String]) → String
+const join = (separator, arr) => arr.join(separator)
+```
+
+
+
+
 
 ## Readings:
 https://medium.com/hackernoon/function-type-signatures-in-javascript-5c698c1e9801
