@@ -10,9 +10,6 @@ For some time I have been dedicated to javascript and I see that there is still 
 
 Currently this is one of my functions, I have started working with this format.
 
-<img src="https://github.com/damiancipolat/Documenting_js_functions/blob/master/doc/my_code.png?raw=true" width="600px" align="center" />
-
-
 ```js
 /*
   Receive currency code and return money simbol.
