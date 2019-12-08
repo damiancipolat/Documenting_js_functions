@@ -3,7 +3,7 @@
 # Documenting functions in javascript
 The idea of this repository is to continue with the last 2 projects that I raised on functional programming in js.
 
-## Why?
+## But why?
 For some time I have been dedicated to javascript and I see that there is still no standard on how developers should document what data should be passed as parameters. Although JS is not a typed language, somehow we have to specify what data is sent in each parameter.
 
 **Currently:** Currently this is one of my functions, I have started working with this format.
@@ -106,16 +106,23 @@ const map = fn => arr => arr.map(fn)
 ```
 
 - OBJECT - f(object) = String.
-Generic format.
+
+**Generic format**
 ```js
 //map :: object → string
 const toJson = obj => JSON.stringify(obj);
 ```
 
-Custom format.
+**Custom format**
 ```js
-//map :: object → string
-const toJson = obj => JSON.stringify(obj);
+//map :: {name:String, age: Number} → string
+const toJson = people => JSON.stringify(people);
+```
+
+**Array of objects**
+```js
+//map :: [{name:String, age: Number}] → [string]
+const encode = people => people.map(p=>btoa(p));
 ```
 
 
