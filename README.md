@@ -165,7 +165,7 @@ Examples converting functions, comments signature.
 
 **Example 1**
 
-JS using the before format.
+Before, code example.
 ```js
 /*
   Receive two arrays with field, analyze both parameters and return the situation.
@@ -178,27 +178,38 @@ JS using the before format.
 const underAge = birth => !birth || (birth && moment().diff(birth, 'years')) < 18;
 ```
 
-JS using the meta lenguage notation.
+After, code example using the meta lenguage notation.
 ```js
 /*
   Receive two arrays with field, analyze both parameters and return the situation.
-  Params
-    flowFields   : {fields:[],onboarding_vu:string,document_attached:string}
-    clientFields : {fields:[],onboarding_vu:string,document_attached:string}
-  Return
-    [string] : required fields
+  underAge :: date → bool
 */
 const underAge = birth => !birth || (birth && moment().diff(birth, 'years')) < 18;
 ```
 
+**Example 2**
 
+Before, code example.
+```js
+/*
+  GET a file from S3 bucket.
+  Params 
+    S3 : aws s3 instance,
+    params : {Bucket:'xxxx',Key:'xxxx'}
+  Return
+    promise
+*/
+const getFile = (s3,params) => s3.getObject(params).promise();
+```
 
-
-
-
-
-
-
+After, code example using the meta lenguage notation.
+```js
+/*
+  GET a file from S3 bucket.
+  getFile :: object, {Bucket:string, Key:string} → promise
+*/
+const getFile = (s3,params) => s3.getObject(params).promise();
+```
 
 ## Readings:
 - https://medium.com/hackernoon/function-type-signatures-in-javascript-5c698c1e9801
