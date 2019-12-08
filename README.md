@@ -61,7 +61,7 @@ const join = (separator, arr) => arr.join(separator)
 The sections are divided in **One parameter** / **Multiple parameters** / **High order functions**.
 
 ### One parameter:
-There are examples with differents data type.
+Examples using 1 parameter as input and one flat return data, **f(a) = b**.
 
 - STRING:
 ```js
@@ -85,6 +85,12 @@ const inverse = value => !value;
 ```js
 //length :: [a] → Number
 const length = list => list.length;
+
+//length :: [string] → Number
+const length = list => list.length;
+
+//length :: [Number] → Number
+const length = list => list.length;
 ```
 
 - DATE:
@@ -97,6 +103,12 @@ const expire = expireDate => new Date()<=expireDate;
 ```js
 //map :: (a → b) → [a] → [b]
 const map = fn => arr => arr.map(fn)
+```
+
+- OBJECT:
+```js
+//map :: object → string
+const toJson = obj => JSON.stringify(obj);
 ```
 
 ## Readings:
