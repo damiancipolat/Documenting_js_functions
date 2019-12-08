@@ -105,6 +105,12 @@ const expire = expireDate => new Date()<=expireDate;
 const map = fn => arr => arr.map(fn)
 ```
 
+- ANY - f(*) = b.
+```js
+//isNull :: * → Bool.
+const isNull = obj => !!obj;
+```
+
 - OBJECT - f(object) = String.
 
 **Generic format**
@@ -125,8 +131,6 @@ const toJson = people => JSON.stringify(people);
 const encode = people => people.map(p=>btoa(p));
 ```
 
-
-
 ### Multiple parameters:
 Examples using 2 parameters as input and one flat return data, **f(x,y) = z**.
 
@@ -143,10 +147,20 @@ const sum = (x,y) => x+y;
 ```
 
 - Array - f([a],b) = c.
+```js
+//concat :: [*],string → string
 const concat = (list,char) => list.join(char).
+```
 
+### High order parameters:
+When a function is passed as parameter, we wrap it’s signature in a parentheses to present a more meaningful overall Type Signature. f(g(x)) = y
 
+```js
+// addOneToAll :: ((Number → Number),[Number]) → [Number]
+const addOneToAll = (addOne = x=>x+1 , arr) => arr.map(addOne)
+```
 
 ## Readings:
 - https://medium.com/hackernoon/function-type-signatures-in-javascript-5c698c1e9801
 - https://github.com/ramda/ramda/wiki/Type-Signatures
+- https://ramdajs.com/docs/
