@@ -160,6 +160,46 @@ When a function is passed as parameter, we wrap it’s signature in a parenthese
 const addOneToAll = (addOne = x=>x+1 , arr) => arr.map(addOne)
 ```
 
+## Using in real world JS
+Examples converting functions, comments signature.
+
+**Example 1**
+
+JS using the before format.
+```js
+/*
+  Receive two arrays with field, analyze both parameters and return the situation.
+  Params
+    flowFields   : {fields:[],onboarding_vu:string,document_attached:string}
+    clientFields : {fields:[],onboarding_vu:string,document_attached:string}
+  Return
+    [string] : required fields
+*/
+const underAge = birth => !birth || (birth && moment().diff(birth, 'years')) < 18;
+```
+
+JS using the meta lenguage notation.
+```js
+/*
+  Receive two arrays with field, analyze both parameters and return the situation.
+  Params
+    flowFields   : {fields:[],onboarding_vu:string,document_attached:string}
+    clientFields : {fields:[],onboarding_vu:string,document_attached:string}
+  Return
+    [string] : required fields
+*/
+const underAge = birth => !birth || (birth && moment().diff(birth, 'years')) < 18;
+```
+
+
+
+
+
+
+
+
+
+
 ## Readings:
 - https://medium.com/hackernoon/function-type-signatures-in-javascript-5c698c1e9801
 - https://github.com/ramda/ramda/wiki/Type-Signatures
