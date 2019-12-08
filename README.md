@@ -57,24 +57,35 @@ const length = arr => arr.length;
 const join = (separator, arr) => arr.join(separator)
 ```
 
-## All cases:
-The sections are divided in **One parameter** / **Multiple parameters** / **High order functions** / ****
+## Code examples:
+The sections are divided in **One parameter** / **Multiple parameters** / **High order functions**.
 
-### One parameter
+### One parameter:
 ```js
-//STRING - length :: String → Number
+//STRING
+//length :: String → Number
 const length = (a)=>a.length;
 
-//NUMBER - increase :: Number → Number
+//NUMBER
+//increase :: Number → Number
 const increase = value => value+10;
 
-//BOOLEAN - inverse :: Bool → Bool
+//BOOLEAN
+//inverse :: Bool → Bool
 const inverse = value => !value;
 
-//DATE - expire :: Date → Bool
-const expire = expireDate => new Date()<=expireDate;
-```
+//ARRAY
+//length :: [a] → Number
+const length = list => list.length;
 
+//DATE
+//expire :: Date → Bool
+const expire = expireDate => new Date()<=expireDate;
+
+//FUNCTION
+//map :: (a → b) → [a] → [b]
+const map = fn => arr => arr.map(fn)
+```
 
 ## Readings:
 https://medium.com/hackernoon/function-type-signatures-in-javascript-5c698c1e9801
