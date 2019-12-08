@@ -120,7 +120,14 @@ Examples using 2 parameters as input and one flat return data, **f(x,y) = z**.
 const join = (separator, arr) => arr.join(separator)
 ```
 
+- Number - f(x,y) ) = z.
+```js
+// sum :: (Number, Number) → NUmber
+const sum = (x,y) => x+y;
+```
 
+- Array - f([a],b) = c.
+const concat = (list,char) => list.join(char).
 
 
 
