@@ -61,28 +61,40 @@ const join = (separator, arr) => arr.join(separator)
 The sections are divided in **One parameter** / **Multiple parameters** / **High order functions**.
 
 ### One parameter:
+There are examples with differents data type.
+
+- STRING:
 ```js
-//STRING
 //length :: String → Number
 const length = (a)=>a.length;
+```
 
-//NUMBER
+- NUMBER:
+```js
 //increase :: Number → Number
 const increase = value => value+10;
+```
 
-//BOOLEAN
+- BOOLEAN:
+```js
 //inverse :: Bool → Bool
 const inverse = value => !value;
+```
 
-//ARRAY
+- ARRAY:
+```js
 //length :: [a] → Number
 const length = list => list.length;
+```
 
-//DATE
+- DATE:
+```js
 //expire :: Date → Bool
 const expire = expireDate => new Date()<=expireDate;
+```
 
-//FUNCTION
+- FUNCTION:
+```js
 //map :: (a → b) → [a] → [b]
 const map = fn => arr => arr.map(fn)
 ```
