@@ -45,7 +45,7 @@ These type notations are a **meta language** called Type Signatures, defines the
 
 Type Signatures are based on Hindley-Milner Type system as a standard type system which is also followed by ML-influenced languages, including Haskell.
 
-**Notation - examples**
+**Some examples:**
 ```js
 // length :: String → Number
 const length = s => s.length;
@@ -56,6 +56,25 @@ const length = arr => arr.length;
 // join :: (String, [String]) → String
 const join = (separator, arr) => arr.join(separator)
 ```
+
+## All cases:
+The sections are divided in **One parameter** / **Multiple parameters** / **High order functions** / ****
+
+### One parameter
+```js
+//STRING - length :: String → Number
+const length = (a)=>a.length;
+
+//NUMBER - increase :: Number → Number
+const increase = value => value+10;
+
+//BOOLEAN - inverse :: Bool → Bool
+const inverse = value => !value;
+
+//DATE - expire :: Date → Bool
+const expire = expireDate => new Date()<=expireDate;
+```
+
 
 ## Readings:
 https://medium.com/hackernoon/function-type-signatures-in-javascript-5c698c1e9801
