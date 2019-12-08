@@ -106,10 +106,19 @@ const map = fn => arr => arr.map(fn)
 ```
 
 - OBJECT - f(object) = String.
+Generic format.
 ```js
 //map :: object → string
 const toJson = obj => JSON.stringify(obj);
 ```
+
+Custom format.
+```js
+//map :: object → string
+const toJson = obj => JSON.stringify(obj);
+```
+
+
 
 ### Multiple parameters:
 Examples using 2 parameters as input and one flat return data, **f(x,y) = z**.
@@ -122,7 +131,7 @@ const join = (separator, arr) => arr.join(separator)
 
 - Number - f(x,y) ) = z.
 ```js
-// sum :: (Number, Number) → NUmber
+// sum :: (Number, Number) → Number
 const sum = (x,y) => x+y;
 ```
 
@@ -132,4 +141,5 @@ const concat = (list,char) => list.join(char).
 
 
 ## Readings:
-https://medium.com/hackernoon/function-type-signatures-in-javascript-5c698c1e9801
+- https://medium.com/hackernoon/function-type-signatures-in-javascript-5c698c1e9801
+- https://github.com/ramda/ramda/wiki/Type-Signatures
